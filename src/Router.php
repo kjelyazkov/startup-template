@@ -22,7 +22,7 @@ class Router
         $path = $this->request->getPath();
         $method = $this->request->getMethod();
 
-        $callback = $this->routers[$method][$path] ?? '/';
+        $callback = $this->routes[$method][$path] ?? '/';
 
         if ($callback === false) {
             return 'Not found';
